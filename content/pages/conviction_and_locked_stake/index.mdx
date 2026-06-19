@@ -164,6 +164,31 @@ commitment state associated with lock-related staking actions among those submis
 References: [Glossary: Extrinsics](https://docs.learnbittensor.org/resources/glossary#extrinsics),
 [Conviction and locked stake](https://docs.learnbittensor.org/staking-and-delegation/conviction-staking)
 
+## Relationship to Unstaking
+
+Conviction and locked stake and unstaking are related but distinct parts of Bittensor staking
+vocabulary. Unstaking is the operation that withdraws staked TAO from a validator position and
+converts the underlying alpha back to TAO through the subnet's AMM, as described in the
+[Staking and delegation overview](https://docs.learnbittensor.org/staking-and-delegation/delegation#unstaking-back-to-tao).
+The same staking overview notes that locked stake cannot be unstaked immediately — a portion subject
+to conviction locks must first pass through an explicit `unlock_stake` transaction followed by an
+unlock period, with roughly 90% of the unlocked amount becoming withdrawable after roughly 365 days.
+The
+[Conviction and locked stake](https://docs.learnbittensor.org/staking-and-delegation/conviction-staking)
+documentation describes conviction as the public on-chain signal produced while that locked alpha is
+waiting to mature into withdrawable form.
+
+For readers, unstaking names the act of taking staked alpha back to the coldkey, while conviction
+and locked stake name the commitment state that delays part of that alpha from being withdrawable.
+The two are not interchangeable: ordinary unstaking proceeds normally for unlocked alpha, while
+alpha bound by a conviction lock must first be unlocked and then ride out the decay period before
+unstaking can return it to the coldkey. The conviction signal accumulates precisely because that
+locked alpha cannot move with the rest.
+
+References:
+[Staking and delegation overview: Unstaking back to TAO](https://docs.learnbittensor.org/staking-and-delegation/delegation#unstaking-back-to-tao),
+[Conviction and locked stake](https://docs.learnbittensor.org/staking-and-delegation/conviction-staking)
+
 ## Further Reading
 
 - [Conviction and locked stake](https://docs.learnbittensor.org/staking-and-delegation/conviction-staking)
