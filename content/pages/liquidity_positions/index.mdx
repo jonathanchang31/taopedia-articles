@@ -91,6 +91,28 @@ measured against; it is not itself the slippage.
 References: [User Liquidity Positions](https://docs.learnbittensor.org/liquidity-positions),
 [Glossary: Slippage](https://docs.learnbittensor.org/resources/glossary#slippage)
 
+## Relationship to Subnet Liquidity Pools
+
+Liquidity positions and subnet liquidity pools are related but distinct parts of Bittensor
+subnet-market vocabulary. A subnet liquidity pool is the automated market maker that each subnet
+runs, holding paired TAO and subnet-specific alpha reserves that price the subnet's token and
+support staking and unstaking conversions. A liquidity position is a user-side concentrated deposit
+that adds depth inside a chosen price range of that same pool. The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) documentation
+describes the per-subnet pool layer, and the
+[User Liquidity Positions](https://docs.learnbittensor.org/liquidity-positions) documentation
+describes how positions add concentrated liquidity on top of that pool.
+
+For readers, the subnet liquidity pool is the market context, and the liquidity position is a
+user-side deposit inside that context. The two are not interchangeable: the pool names the automated
+market maker the subnet runs, while the position names a participant's range-bounded contribution to
+that pool's depth. A position only exists inside a subnet's liquidity pool; the pool exists with or
+without positions.
+
+References:
+[Understanding Subnets: Liquidity pools](https://docs.learnbittensor.org/subnets/understanding-subnets#liquidity-pools),
+[User Liquidity Positions](https://docs.learnbittensor.org/liquidity-positions)
+
 ## Reader Boundary
 
 Liquidity positions should not be read as an earnings promise, trading advice, or operations guide.
