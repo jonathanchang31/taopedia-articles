@@ -268,6 +268,28 @@ adjustment that operates inside consensus work across that cadence.
 References: [Glossary: Tempo](https://docs.learnbittensor.org/resources/glossary#tempo),
 [Consensus-based Weights](https://docs.learnbittensor.org/concepts/consensus-based-weights)
 
+## Relationship to Subnet Liquidity Pools
+
+Liquid alpha and subnet liquidity pools are related but distinct parts of Bittensor subnet
+vocabulary. Liquid alpha is a consensus-based-weights feature that varies the EMA smoothing factor
+used when validator-miner bonds are updated inside a subnet. Subnet liquidity pools are the
+automated market maker pools each subnet runs, holding paired TAO and subnet-specific alpha reserves
+that drive staking, unstaking, and price context. The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) documentation
+describes those pools as the per-subnet liquidity layer, and the
+[Consensus-based Weights](https://docs.learnbittensor.org/concepts/consensus-based-weights)
+documentation describes liquid alpha as the per-pair bond-smoothing adjustment on the consensus
+side.
+
+For readers, subnet liquidity pools are the price-and-staking layer, while liquid alpha is a
+consensus-side adjustment that operates on validator-miner bonds inside a subnet. The two act on
+different state: liquidity pools hold the TAO and alpha reserves; liquid alpha changes how bond
+updates are smoothed across epochs. They are not interchangeable — one names a market-maker context,
+the other names a consensus-smoothing setting.
+
+References: [Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Consensus-based Weights](https://docs.learnbittensor.org/concepts/consensus-based-weights)
+
 ## Further Reading
 
 - [Consensus-based Weights / Liquid Alpha](https://docs.learnbittensor.org/concepts/consensus-based-weights)
