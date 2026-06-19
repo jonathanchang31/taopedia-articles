@@ -203,6 +203,23 @@ mechanisms belong to when emission rates can drop under supply-based tokenomics 
 References: [Glossary: Tempo](https://docs.learnbittensor.org/resources/glossary#tempo),
 [Halving Mechanisms](https://docs.learnbittensor.org/concepts/halving)
 
+## Relationship to Alpha Halving
+
+Halving mechanisms and alpha halving are related but distinct scopes in Bittensor tokenomics. The
+[Halving Mechanisms](https://docs.learnbittensor.org/concepts/halving) documentation describes both
+the network-scoped TAO halving rule and the per-subnet alpha halving rule, while the alpha halving
+concept names the per-subnet event of an alpha-token emission rate being cut when the subnet's alpha
+supply reaches a threshold. The same source frames the alpha halving as the subnet-scoped instance
+of the same supply-threshold mechanism that the TAO halving applies at the network level.
+
+For readers, halving mechanisms is the umbrella documentation for both rules, while alpha halving
+names the specific per-subnet rule and event. The TAO halving affects whole-network TAO emission;
+alpha halving affects only the alpha-token emission rate of one subnet. They share the underlying
+threshold logic but operate on different supplies and timelines.
+
+References: [Halving Mechanisms](https://docs.learnbittensor.org/concepts/halving),
+[Glossary: Halving](https://docs.learnbittensor.org/resources/glossary#halving)
+
 ## Further Reading
 
 - [Halving Mechanisms](https://docs.learnbittensor.org/concepts/halving)
