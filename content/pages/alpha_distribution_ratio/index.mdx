@@ -131,6 +131,28 @@ at different scopes and answer different questions about the same emission syste
 References: [Glossary: TAO Weight](https://docs.learnbittensor.org/resources/glossary#tao-weight),
 [Glossary: ADR](https://docs.learnbittensor.org/resources/glossary#adr-alpha-distribution-ratio)
 
+## Relationship to Alpha Halving
+
+Alpha Distribution Ratio and alpha halving are related but distinct parts of Bittensor subnet
+tokenomics. ADR is the subnet-level ratio that compares alpha emitted to participants with alpha
+injected into the subnet's pool, while alpha halving is the per-subnet event that cuts a subnet's
+alpha emission rate in half when the subnet's alpha supply reaches a threshold. The
+[Glossary: ADR](https://docs.learnbittensor.org/resources/glossary#adr-alpha-distribution-ratio)
+entry notes that under the current protocol ADR tracks the difference between the global TAO halving
+index and the subnet's alpha halving index, and the
+[Halving Mechanisms](https://docs.learnbittensor.org/concepts/halving) documentation describes the
+alpha halving rule that drives that index.
+
+For readers, ADR is a continuous ratio between participant emission and pool injection, while alpha
+halving is the discrete supply-threshold event that lowers the alpha emission rate for one subnet.
+An alpha halving changes one input to ADR by halving the alpha emission rate the numerator counts.
+The two should not be read as the same event: ADR measures a ratio, alpha halving changes a
+parameter that ratio depends on.
+
+References:
+[Glossary: ADR](https://docs.learnbittensor.org/resources/glossary#adr-alpha-distribution-ratio),
+[Halving Mechanisms](https://docs.learnbittensor.org/concepts/halving)
+
 ## Further Reading
 
 - [Glossary: ADR](https://docs.learnbittensor.org/resources/glossary#adr-alpha-distribution-ratio)
