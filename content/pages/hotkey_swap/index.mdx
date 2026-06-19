@@ -117,6 +117,26 @@ hotkey swap as the sanctioned rotation path rather than a wallet or coldkey chan
 References: [Glossary: Hotkey](https://docs.learnbittensor.org/resources/glossary#hotkey),
 [Wallets, Coldkeys and Hotkeys in Bittensor](https://docs.learnbittensor.org/keys/wallets)
 
+## Relationship to Coldkey Swap
+
+Hotkey swap and coldkey swap are related but distinct key-rotation operations. Hotkey swap moves
+subnet participation from an old hotkey to a new hotkey owned by the same coldkey, as described in
+the
+[Coldkey and Hotkey Workstation Security](https://docs.learnbittensor.org/keys/coldkey-hotkey-security)
+documentation. Coldkey swap migrates the entire wallet's on-chain identity — TAO balances, subnet
+ownership, and registrations — to a new coldkey, as described in the
+[Rotate or Swap your Coldkey](https://docs.learnbittensor.org/keys/coldkey-swap) documentation.
+
+For readers, the two act at different levels of the wallet model. Hotkey swap is operational-key
+rotation triggered by a compromised or outdated hotkey, while coldkey swap is identity-level
+migration triggered by a potentially compromised coldkey. A hotkey swap leaves the coldkey and
+wallet identity unchanged; a coldkey swap leaves the hotkey surface largely unchanged but re-homes
+the controlling coldkey. Each operation is the sanctioned recovery path for its own key level.
+
+References:
+[Coldkey and Hotkey Workstation Security](https://docs.learnbittensor.org/keys/coldkey-hotkey-security),
+[Rotate or Swap your Coldkey](https://docs.learnbittensor.org/keys/coldkey-swap)
+
 ## Further Reading
 
 - [Coldkey and Hotkey Workstation Security](https://docs.learnbittensor.org/keys/coldkey-hotkey-security)
