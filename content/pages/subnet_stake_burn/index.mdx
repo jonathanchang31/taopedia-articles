@@ -107,6 +107,25 @@ References:
 [Glossary: Alpha Outstanding](https://docs.learnbittensor.org/resources/glossary#alpha-outstanding),
 [Subnet Stake Burn](https://docs.learnbittensor.org/concepts/stake-burn)
 
+## Relationship to Reserve Ratio
+
+Subnet stake burn and reserve ratio are related but distinct parts of subnet pool tokenomics. Subnet
+stake burn is the subnet-owner mechanism that adds TAO to a subnet's reserve while burning the
+corresponding alpha, and reserve ratio is the subnet-level measure of how the TAO and alpha sides of
+that same pool are sized. The
+[Subnet Stake Burn](https://docs.learnbittensor.org/concepts/stake-burn) documentation describes the
+TAO-in / alpha-out flow, and the
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) documentation
+describes the TAO/alpha reserve pair whose sizing is the reserve ratio.
+
+For readers, a stake burn event shifts the pool's TAO reserve up and removes alpha from supply, so
+the reserve ratio moves with each burn. The two are not interchangeable: stake burn is the action
+that produces a particular pool-composition change, while reserve ratio is the measure that names
+how the pool sides are sized after that change.
+
+References: [Subnet Stake Burn](https://docs.learnbittensor.org/concepts/stake-burn),
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets)
+
 ## Further Reading
 
 - [Subnet Stake Burn](https://docs.learnbittensor.org/concepts/stake-burn)
