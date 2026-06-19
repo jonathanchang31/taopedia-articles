@@ -93,6 +93,25 @@ References:
 [Multiple Incentive Mechanisms Within Subnets](https://docs.learnbittensor.org/subnets/understanding-multiple-mech-subnets),
 [Glossary: Weight Matrix](https://docs.learnbittensor.org/resources/glossary#weight-matrix)
 
+## Relationship to TAO Reserve
+
+TAO weight and TAO Reserve are related but distinct parts of Bittensor subnet vocabulary. TAO weight
+is the global parameter that determines how TAO stake contributes relative to alpha stake in
+stake-weight and root-proportion calculations, while TAO Reserve names the pool-held TAO side of a
+subnet's automated market maker. The
+[Glossary: TAO Weight](https://docs.learnbittensor.org/resources/glossary#tao-weight) entry
+describes TAO weight as the global TAO-vs-alpha influence parameter (currently 0.18), and the
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) documentation
+describes TAO Reserve as one of the two pool sides that pair with the subnet-specific alpha reserve.
+
+For readers, TAO weight is a global tuning parameter, while TAO Reserve is a per-subnet pool-side
+quantity. The two are not interchangeable: TAO weight changes how TAO and alpha stake are blended in
+consensus arithmetic, while TAO Reserve changes how much TAO sits on one side of a subnet's AMM
+pool. A subnet can have a low TAO weight and still hold a large TAO Reserve, or vice versa.
+
+References: [Glossary: TAO Weight](https://docs.learnbittensor.org/resources/glossary#tao-weight),
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets)
+
 ## Related Articles
 
 - [[yuma_consensus|Yuma Consensus]]
